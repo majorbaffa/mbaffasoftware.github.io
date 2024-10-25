@@ -30,6 +30,7 @@
             color: white;
             margin: 0 15px;
             text-decoration: none;
+            font-weight: bold;
         }
 
         nav a:hover {
@@ -37,7 +38,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
             background: white;
@@ -45,8 +46,25 @@
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
-        h1 {
+        h1, h2 {
             margin-top: 0;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .image-gallery {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .image-gallery img {
+            width: calc(33% - 10px);
+            margin-bottom: 10px;
+            border-radius: 8px;
         }
 
         footer {
@@ -70,10 +88,20 @@
         }
 
         /* Responsive styles */
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             nav a {
                 display: block;
                 margin: 10px 0;
+            }
+
+            .image-gallery img {
+                width: calc(50% - 10px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .image-gallery img {
+                width: 100%;
             }
         }
     </style>
@@ -84,23 +112,37 @@
         <nav>
             <a href="#about">About</a>
             <a href="#services">Services</a>
+            <a href="#gallery">Gallery</a>
             <a href="#contact">Contact</a>
         </nav>
     </header>
 
     <div class="container">
-        <section id="about">
+        <section id="about" class="section">
             <h2>About Us</h2>
             <p>We are dedicated to providing the best service possible. Our team is highly skilled and ready to help you with your needs.</p>
         </section>
 
-        <section id="services">
+        <section id="services" class="section">
             <h2>Our Services</h2>
             <p>We offer a variety of services to meet your needs, including web development, app development, and more.</p>
             <a href="#" class="btn">Learn More</a>
         </section>
 
-        <section id="contact">
+        <section id="gallery" class="section">
+            <h2>Our Gallery</h2>
+            <p>Check out some of our amazing work:</p>
+            <div class="image-gallery">
+                <img src="https://via.placeholder.com/300x200" alt="Placeholder Image 1">
+                <img src="https://via.placeholder.com/300x200" alt="Placeholder Image 2">
+                <img src="https://via.placeholder.com/300x200" alt="Placeholder Image 3">
+                <img src="https://via.placeholder.com/300x200" alt="Placeholder Image 4">
+                <img src="https://via.placeholder.com/300x200" alt="Placeholder Image 5">
+                <img src="https://via.placeholder.com/300x200" alt="Placeholder Image 6">
+            </div>
+        </section>
+
+        <section id="contact" class="section">
             <h2>Contact Us</h2>
             <p>If you have any questions, feel free to reach out to us!</p>
         </section>
